@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Tarun Bali, a student passionate about AI/ML technology.">
+  <title>Tarun Bali - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Add this to the head section for Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Add the interactive whale CSS -->
+  <link rel="stylesheet" href="interactive-whale.css">
+</head>
+<body>
+  <!-- Loading Animation -->
+  <div id="loading" aria-label="Loading animation">
+    <h1>Loading &nbsp; &nbsp; </h1>
+    <div class="circle">
+      <div class="dot dot-1"></div>
+      <div class="dot dot-2"></div>
+      <div class="dot dot-3"></div>
+      <div class="dot dot-4"></div>
+      <div class="dot dot-5"></div>
+      <div class="dot dot-6"></div>
+      <div class="dot dot-7"></div>
+      <div class="dot dot-8"></div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div id="content" class="hidden">
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero" aria-label="Home section">
+      <div class="hero-content">
+        <h1>Tarun Bali</h1>
+        <p class="tagline">AI Enthusiast | Creative Developer | Tech Explorer</p>
+        <div class="social-links">
+          <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:your@email.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <button class="btn explore-btn" aria-label="Explore my work">Explore My Universe</button>
+      </div>
+
+      <!-- Whale Animation Container -->
+      <div id="whale" class="whale-animation"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about" aria-label="About section">
+      <h2>About Me</h2>
+      <p>
+        I’m <strong>Tarun Bali</strong>, an 18-year-old student currently pursuing a <strong>Bachelor of Arts in Political Science & English</strong> at the <strong>University of Delhi</strong>. My passion lies at the intersection of <strong>Artificial Intelligence (AI)</strong>, <strong>Machine Learning (ML)</strong>, and <strong>technology</strong>, where I constantly explore innovative ways to push boundaries and solve real-world problems.
+      </p>
+    
+      <h3>AI-Powered Development</h3>
+      <p>
+        I specialize in <strong>AI prompt engineering</strong>, leveraging tools like ChatGPT to optimize programs, test chatbot limits (e.g., censorship, response depth), and automate tasks, achieving a <strong>40% efficiency gain</strong>. I’ve also built utility tools using AI-generated code, consistently achieving functional outputs in <strong>≤5 prompts</strong>.
+      </p>
+    
+      <h3>Digital Design & Development</h3>
+      <p>
+        With a creative flair, I’ve designed <strong>posters, logos, and animations</strong> for academic projects and edited videos with seamless transitions and effects. I’m self-taught in <strong>Canva</strong> and <strong>Photoshop</strong>, and my work has been praised for its creativity and attention to detail. I’ve also created <strong>5+ HTML animations</strong> for my portfolio, showcasing my technical and artistic skills.
+      </p>
+    
+      <h3>Teaching & Leadership</h3>
+      <p>
+        Beyond academics, I’ve volunteered at a local elementary school, teaching <strong>30+ kids</strong> in a 5-day program. I’ve authored a <strong>Literature Review on Global Warming</strong> (citing 10+ sources) and a <strong>Digital Novelette</strong>, demonstrating my research and writing abilities. As the <strong>Sports Captain</strong> at DU (2023–24), I’ve led teams to success and earned <strong>bronze medals</strong> in state-level judo competitions during my school years.
+      </p>
+    
+      <h3>Skills & Expertise</h3>
+      <ul>
+        <li><strong>AI & ML</strong>: Prompt engineering, chatbot testing, automation.</li>
+        <li><strong>Design & Development</strong>: Canva, Photoshop, HTML animations, video editing.</li>
+        <li><strong>Communication</strong>: Effective written and verbal communication in <strong>English</strong>, <strong>Hindi</strong>, and <strong>Urdu</strong>.</li>
+        <li><strong>Research & Learning</strong>: Critical thinking, analytical problem-solving, and a passion for continuous learning.</li>
+      </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects" aria-label="Projects section">
+      <h2>My Projects</h2>
+      <div class="project-tape">
+        <button class="arrow left-arrow" aria-label="Previous project">&larr;</button>
+        <div class="project-frame" aria-live="polite">
+          <!-- Projects will be dynamically inserted here -->
+        </div>
+        <button class="arrow right-arrow" aria-label="Next project">&rarr;</button>
+      </div>
+    </section>
+
+    <!-- Enhanced Contact Section -->
+    <section id="contact" class="contact" aria-label="Contact section">
+      <div class="contact-container">
+        <div class="contact-info">
+          <h2>Let's Connect!</h2>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>New Delhi, India</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <p>tarun.bali@example.com</p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <p>+91 98765 43210</p>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="your-resume.pdf" download aria-label="Download Resume"><i class="fas fa-file-download"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" aria-label="Contact form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer aria-label="Footer">
+      <p>&copy; 2023 Tarun Bali. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="jquery.js"></script>
+  <script src="interactive-whale.js"></script>
+  <script src="script.js" defer></script>
+
+  <!-- Ensure Whale Animation Only Works in Home Section -->
+  <script>
+    $(document).ready(function () {
+      // Function to check if the Home section is in view
+      function isHomeSectionInView() {
+        const homeSection = $('#home');
+        const scrollTop = $(window).scrollTop();
+        const windowHeight = $(window).height();
+        const sectionTop = homeSection.offset().top;
+        const sectionBottom = sectionTop + homeSection.outerHeight();
+
+        return scrollTop + windowHeight >= sectionTop && scrollTop <= sectionBottom;
+      }
+
+      // Toggle whale animation based on section visibility
+      function toggleWhaleAnimation() {
+        if (isHomeSectionInView()) {
+          $('#whale').show(); // Show the whale animation
+        } else {
+          $('#whale').hide(); // Hide the whale animation
+        }
+      }
+
+      // Initial check
+      toggleWhaleAnimation();
+
+      // Check on scroll
+      $(window).scroll(function () {
+        toggleWhaleAnimation();
+      });
+    });
+  </script>
+</body>
+</html>

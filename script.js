@@ -134,12 +134,12 @@ window.addEventListener('load', () => {
   // Function to initialize projects and other functionality
   function initializeProjects() {
     const projects = [
-      { title: "Project 1", description: "Description of Project 1", image: "assets/project1.jpg" },
-      { title: "Project 2", description: "Description of Project 2", image: "assets/project2.jpg" },
-      { title: "Project 3", description: "Digital Poster for a Sci-fi themed Cafe", image: "assets/project3.jpg" },
-      { title: "Project 4", description: "Description of Project 4", image: "assets/project4.jpg" },
-      { title: "Project 5", description: "Description of Project 5", image: "assets/project5.jpg" },
-      { title: "Project 6", description: "Description of Project 6", image: "assets/project6.jpg" },
+      { title: "Project 1", description: "Description of Project 1", image: "/Portfolio/assets/project1.jpg" },
+      { title: "Project 2", description: "Description of Project 2", image: "/Portfolio/assets/project2.jpg" },
+      { title: "Project 3", description: "Digital Poster for a Sci-fi themed Cafe", image: "/Portfolio/assets/project3.jpg" },
+      { title: "Project 4", description: "Description of Project 4", image: "/Portfolio/assets/project4.jpg" },
+      { title: "Project 5", description: "Description of Project 5", image: "/Portfolio/assets/project5.jpg" },
+      { title: "Project 6", description: "Description of Project 6", image: "/Portfolio/assets/project6.jpg" },
     ];
   
     const projectFrame = document.querySelector('.project-frame');

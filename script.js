@@ -278,6 +278,17 @@ window.addEventListener('load', () => {
         document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
       });
     }
+      // Other navigations
+    AboutNavItem.querySelector('a')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+     ContactNavItem.querySelector('a')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
   
     // Set minimum height for projects section
     const projectsSection = document.querySelector('#projects');

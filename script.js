@@ -136,7 +136,7 @@ window.addEventListener('load', () => {
     const projects = [
       { title: "Project 1", description: "Description of Project 1", image: "Assets/project1.jpg" },
       { title: "Project 2", description: "Description of Project 2", image: "Assets/project2.jpg" },
-      { title: "Project 3", description: "Digital Poster for a Sci-fi themed Cafe", image: "Assets/project3.jpg" },
+      { title: "DIgital Poster", description: "Digital Poster for a Sci-fi themed Cafe", image: "Assets/project3.jpg" },
       { title: "Project 4", description: "Description of Project 4", image: "Assets/project4.jpg" },
       { title: "Project 5", description: "Description of Project 5", image: "Assets/project5.jpg" },
       { title: "Project 6", description: "Description of Project 6", image: "Assets/project6.jpg" },

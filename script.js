@@ -21,7 +21,8 @@ window.addEventListener('load', () => {
     if (!whaleAnimationContainer) {
       console.error('Whale animation container not found!');
       return;
-
+    }
+    
   // Whale animation code
   const whale = (function () {
     const element = whaleAnimationContainer;

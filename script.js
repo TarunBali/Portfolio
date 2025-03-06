@@ -121,7 +121,7 @@ window.addEventListener('load', () => {
 
   // Initial check
   toggleWhaleAnimation();
-}
+
 
 // Function to initialize projects and other functionality
 function initializeProjects() {

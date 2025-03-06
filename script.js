@@ -15,6 +15,13 @@ window.addEventListener('load', () => {
   initializeProjects();
 });
 
+// Function to initialize the whale animation
+  function initializeWhaleAnimation() {
+    const whaleAnimationContainer = document.getElementById('whale-animation');
+    if (!whaleAnimationContainer) {
+      console.error('Whale animation container not found!');
+      return;
+
   // Whale animation code
   const whale = (function () {
     const element = whaleAnimationContainer;
@@ -121,7 +128,7 @@ window.addEventListener('load', () => {
 
   // Initial check
   toggleWhaleAnimation();
-
+  }
 
 // Function to initialize projects and other functionality
 function initializeProjects() {

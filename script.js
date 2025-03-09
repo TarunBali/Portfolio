@@ -134,12 +134,12 @@ window.addEventListener('load', () => {
 // Function to initialize projects and other functionality
 function initializeProjects() {
   const projects = [
-    { title: "Project 1", description: "Description of Project 1", image: "Assets/project1.jpg" },
-    { title: "Project 2", description: "Description of Project 2", image: "Assets/project2.jpg" },
-    { title: "Digital Poster", description: "Digital Poster for a Sci-fi themed Cafe", image: "Assets/project3.jpg" },
-    { title: "Project 4", description: "Description of Project 4", image: "Assets/project4.jpg" },
-    { title: "Project 5", description: "Description of Project 5", image: "Assets/project5.jpg" },
-    { title: "Project 6", description: "Description of Project 6", image: "Assets/project6.jpg" },
+    { title: "LUCIFER", description: "A Voice Assistant for Windows 10", image: "Assets/project1.png" },
+    { title: "Wrath from the Shadows", description: "A shattered soul seeks retribution in the darkest corners, where the echoes of betrayal and revenge collide—but does he emerge victorious, or consumed by the very darkness he wields? ", image: "Assets/project2.jpg" },
+    { title: "Celestia", description: "Digital Poster for a Sci-fi themed Cafe", image: "Assets/project3.jpg" },
+    { title: "DUZHDC-2", description: "The Second reel I made for the instagram page @DUZHDC", image: "Assets/project4.jpg" },
+    { title: "Gesture Cursor Control", description: "A Python program that lets you control your cursor from fair using a webcam", image: "Assets/project5.jpg" },
+    { title: "DUZHDC-1", description: "The First reel I made for the instagram page @DUZHDC", image: "Assets/project6.jpg" },
   ];
 
   const projectFrame = document.querySelector('.project-frame');

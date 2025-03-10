@@ -6,9 +6,9 @@
   <meta name="description" content="Portfolio of Tarun Bali, a student passionate about AI/ML technology.">
   <title>Tarun Bali - Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Add this to the head section for Font Awesome icons -->
+  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- Add the interactive whale CSS -->
+  <!-- Interactive Whale CSS -->
   <link rel="stylesheet" href="interactive-whale.css">
 </head>
 <body>
@@ -49,7 +49,18 @@
           <a href="mailto:T-_-B@outlook.com" target="_blank" aria-label="Email-1"><i class="fa fa-envelope-square"></i></a>
           <a href="mailto:T-A-R-U-N@outlook.com" aria-label="Email-2"><i class="fas fa-envelope"></i></a>
         </div>
-        <button class="btn explore-btn" aria-label="Explore my work">Explore My Universe</button>
+        <!-- Music Player (Replaces Explore My Universe Button) -->
+        <div id="music-player">
+          <button id="prev-song" class="music-control" aria-label="Previous song">
+            <i class="fas fa-backward"></i>
+          </button>
+          <button id="play-pause" class="music-control" aria-label="Play/Pause music">
+            <i class="fas fa-play" id="music-icon"></i>
+          </button>
+          <button id="next-song" class="music-control" aria-label="Next song">
+            <i class="fas fa-forward"></i>
+          </button>
+        </div>
       </div>
 
       <!-- Whale Animation Container -->
@@ -99,7 +110,7 @@
       </div>
     </section>
 
-    <!-- Enhanced Contact Section -->
+    <!-- Contact Section -->
     <section id="contact" class="contact" aria-label="Contact section">
       <div class="contact-container">
         <div class="contact-info">
@@ -136,6 +147,14 @@
       <p>&copy; 2025 Tarun Bali. All rights reserved.</p>
     </footer>
   </div>
+
+  <!-- Background Music -->
+  <audio id="background-music">
+    <source src="Assets/song-1.mp3" type="audio/mpeg">
+    <source src="Assets/song-2.mp3" type="audio/mpeg">
+    <source src="Assets/song-3.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
   <!-- Scripts -->
   <script src="jquery.js"></script>

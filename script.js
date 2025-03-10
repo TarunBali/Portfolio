@@ -141,25 +141,25 @@ function initializeProjects() {
       title: "LUCIFER", 
       description: "Lucifer is a sleek, voice-activated personal assistant designed to simplify your daily tasks with intuitive commands and seamless integration into your workflow.", 
       image: "Assets/project1.png", 
-      url: "https://example.com/lucifer" 
+      url: "https://github.com/TarunBali/Lucifer" 
     },
     { 
       title: "Wrath from the Shadows", 
       description: "A shattered soul seeks retribution in the darkest corners, where the echoes of betrayal and revenge collide—but does he emerge victorious, or consumed by the very darkness he wields?", 
       image: "Assets/project2.jpg", 
-      url: "https://example.com/wrath" 
+      url: "https://tarunbali.github.io/Novelette/" 
     },
     { 
       title: "Celestia", 
       description: "Digital Poster for a Sci-fi themed Cafe", 
       image: "Assets/project3.jpg", 
-      url: "https://example.com/celestia" 
+      url: "https://drive.google.com/file/d/1uBAoPcQGNrkGkOeu7ZC0KpzmkdHillN_/view?usp=sharing" 
     },
     { 
       title: "@DUZHDC", 
       description: "A reel I made for the instagram page @DUZHDC", 
       image: "Assets/project4.jpg", 
-      url: "https://example.com/duzhdc" 
+      url: "https://drive.google.com/file/d/1GR-5_9Dw7xqcoWVLVwnHLEeQkp4jR6HG/view?usp=sharing" 
     },
     { 
       title: "Gesture Cursor Control", 
@@ -171,7 +171,7 @@ function initializeProjects() {
       title: "Status of Acid Rain in India", 
       description: "A Literature review delving into the Causes, Effects and Status of Acid Rain in India", 
       image: "Assets/project6.jpg", 
-      url: "https://example.com/acid-rain" 
+      url: "https://drive.google.com/file/d/1luy1B51BM0NK8R4Mems0zMSqgAV1MedP/view?usp=sharing" 
     },
   ];
 

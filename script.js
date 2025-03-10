@@ -13,6 +13,9 @@ window.addEventListener('load', () => {
 
   // Initialize projects and other functionality
   initializeProjects();
+
+  // Initialize the music player
+  initializeMusicPlayer();
 });
 
 // Function to initialize the whale animation
@@ -134,12 +137,42 @@ function initializeWhaleAnimation() {
 // Function to initialize projects and other functionality
 function initializeProjects() {
   const projects = [
-    { title: "LUCIFER", description: "Lucifer is a sleek, voice-activated personal assistant designed to simplify your daily tasks with intuitive commands and seamless integration into your workflow.", image: "Assets/project1.png" },
-    { title: "Wrath from the Shadows", description: "A shattered soul seeks retribution in the darkest corners, where the echoes of betrayal and revenge collide—but does he emerge victorious, or consumed by the very darkness he wields?", image: "Assets/project2.jpg" },
-    { title: "Celestia", description: "Digital Poster for a Sci-fi themed Cafe", image: "Assets/project3.jpg" },
-    { title: "@DUZHDC", description: "A reel I made for the instagram page @DUZHDC", image: "Assets/project4.jpg" },
-    { title: "Gesture Cursor Control", description: "A Python program that lets you control your cursor from far using a webcam", image: "Assets/project5.jpg" },
-    { title: "Status of Acid Rain in India", description: "A Literature review delving into the Causes, Effects and Status of Acid Rain in India", image: "Assets/project6.jpg" },
+    { 
+      title: "LUCIFER", 
+      description: "Lucifer is a sleek, voice-activated personal assistant designed to simplify your daily tasks with intuitive commands and seamless integration into your workflow.", 
+      image: "Assets/project1.png", 
+      url: "https://example.com/lucifer" 
+    },
+    { 
+      title: "Wrath from the Shadows", 
+      description: "A shattered soul seeks retribution in the darkest corners, where the echoes of betrayal and revenge collide—but does he emerge victorious, or consumed by the very darkness he wields?", 
+      image: "Assets/project2.jpg", 
+      url: "https://example.com/wrath" 
+    },
+    { 
+      title: "Celestia", 
+      description: "Digital Poster for a Sci-fi themed Cafe", 
+      image: "Assets/project3.jpg", 
+      url: "https://example.com/celestia" 
+    },
+    { 
+      title: "@DUZHDC", 
+      description: "A reel I made for the instagram page @DUZHDC", 
+      image: "Assets/project4.jpg", 
+      url: "https://example.com/duzhdc" 
+    },
+    { 
+      title: "Gesture Cursor Control", 
+      description: "A Python program that lets you control your cursor from far using a webcam", 
+      image: "Assets/project5.jpg", 
+      url: "https://example.com/gesture-cursor" 
+    },
+    { 
+      title: "Status of Acid Rain in India", 
+      description: "A Literature review delving into the Causes, Effects and Status of Acid Rain in India", 
+      image: "Assets/project6.jpg", 
+      url: "https://example.com/acid-rain" 
+    },
   ];
 
   const projectFrame = document.querySelector('.project-frame');
@@ -164,6 +197,10 @@ function initializeProjects() {
       <h3>${project.title}</h3>
       <p>${project.description}</p>
     `;
+    // Add click event to redirect to the project URL
+    card.addEventListener('click', () => {
+      window.open(project.url, '_blank');
+    });
     projectFrame.appendChild(card);
     return card;
   });
@@ -302,4 +339,85 @@ function initializeProjects() {
   if (projectsSection) {
     projectsSection.style.minHeight = "100vh";
   }
+}
+
+// Function to initialize the music player
+function initializeMusicPlayer() {
+  const musicPlayer = document.getElementById('music-player');
+  const playPauseButton = document.getElementById('play-pause');
+  const prevSongButton = document.getElementById('prev-song');
+  const nextSongButton = document.getElementById('next-song');
+  const musicIcon = document.getElementById('music-icon');
+  const backgroundMusic = document.getElementById('background-music');
+
+  const songs = [
+    'Assets/song-1.mp3',
+    'Assets/song-2.mp3',
+    'Assets/song-3.mp3',
+  ];
+  let currentSongIndex = 0;
+  let isPlaying = false;
+
+  // Load the first song
+  backgroundMusic.src = songs[currentSongIndex];
+
+  // Play/Pause functionality
+  playPauseButton.addEventListener('click', () => {
+    if (isPlaying) {
+      backgroundMusic.pause();
+      musicIcon.classList.remove('fa-pause');
+      musicIcon.classList.add('fa-play');
+    } else {
+      backgroundMusic.play();
+      musicIcon.classList.remove('fa-play');
+      musicIcon.classList.add('fa-pause');
+    }
+    isPlaying = !isPlaying;
+  });
+
+  // Next song functionality
+  nextSongButton.addEventListener('click', () => {
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    backgroundMusic.src = songs[currentSongIndex];
+    if (isPlaying) backgroundMusic.play();
+  });
+
+  // Previous song functionality
+  prevSongButton.addEventListener('click', () => {
+    currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+    backgroundMusic.src = songs[currentSongIndex];
+    if (isPlaying) backgroundMusic.play();
+  });
+
+  // Handle scroll events
+  window.addEventListener('scroll', () => {
+    const homeSection = document.getElementById('home');
+    const homeSectionBottom = homeSection.getBoundingClientRect().bottom;
+
+    if (homeSectionBottom < 0) {
+      // User has scrolled down
+      musicPlayer.classList.add('collapsed');
+    } else {
+      // User is in the home section
+      musicPlayer.classList.remove('collapsed');
+    }
+  });
+
+  // Expand/collapse music player on hover/click
+  musicPlayer.addEventListener('mouseenter', () => {
+    musicPlayer.classList.add('expanded');
+  });
+
+  musicPlayer.addEventListener('mouseleave', () => {
+    if (!isPlaying) {
+      musicPlayer.classList.remove('expanded');
+    }
+  });
+
+  // Collapse music player when clicking outside
+  document.addEventListener('click', (event) => {
+    if (!musicPlayer.contains(event.target)) {
+      musicPlayer.classList.remove('expanded');
+    }
+  });
 }

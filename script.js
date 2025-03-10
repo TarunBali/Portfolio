@@ -16,6 +16,12 @@ window.addEventListener('load', () => {
 
   // Initialize the music player
   initializeMusicPlayer();
+
+  // Initialize the contact form
+  initializeContactForm();
+
+  // Initialize the water animation
+  initializeWaterAnimation();
 });
 
 // Function to initialize the whale animation
@@ -159,7 +165,7 @@ function initializeProjects() {
       title: "@DUZHDC", 
       description: "A reel I made for the instagram page @DUZHDC", 
       image: "Assets/project4.jpg", 
-      url: "https://drive.google.com/file/d/1GR-5_9Dw7xqcoWVLVwnHLEeQkp4jR6HG/view?usp=sharing" 
+      url: "https://www.instagram.com/reel/DEP6CYEysYT/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA==" 
     },
     { 
       title: "Gesture Cursor Control", 
@@ -389,6 +395,13 @@ function initializeMusicPlayer() {
     if (isPlaying) backgroundMusic.play();
   });
 
+  // Automatically play the next song when the current one ends
+  backgroundMusic.addEventListener('ended', () => {
+    currentSongIndex = (currentSongIndex + 1) % songs.length;
+    backgroundMusic.src = songs[currentSongIndex];
+    backgroundMusic.play();
+  });
+
   // Handle scroll events
   window.addEventListener('scroll', () => {
     const homeSection = document.getElementById('home');
@@ -420,4 +433,45 @@ function initializeMusicPlayer() {
       musicPlayer.classList.remove('expanded');
     }
   });
+}
+
+// Function to initialize the contact form
+function initializeContactForm() {
+  const contactForm = document.querySelector('.contact-form');
+  if (!contactForm) {
+    console.error('Contact form not found!');
+    return;
+  }
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(contactForm);
+    const response = await fetch('https://formspree.io/f/mqkrqjzv', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      alert('Message sent successfully!');
+      contactForm.reset();
+    } else {
+      alert('Failed to send message. Please try again.');
+    }
+  });
+}
+
+// Function to initialize the water animation
+function initializeWaterAnimation() {
+  const water = document.getElementById('water');
+  if (!water) {
+    console.error('Water animation container not found!');
+    return;
+  }
+
+  // Ensure water animation is always active
+  water.classList.add('filter-active', 'flow-active');
 }

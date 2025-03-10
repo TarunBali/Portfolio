@@ -1,6 +1,4 @@
 /* Global Styles */
-
-
 #whale {
     height: 99.5%;
     width: 100%; /* From interactive-whale.css */
@@ -458,6 +456,7 @@ nav ul li:hover .dropdown {
     z-index: 1; /* Ensure it's behind the content */
     pointer-events: none; /* Allow clicks to pass through to the content below */
 }
+
 .hero-content {
     z-index: 2;
 }

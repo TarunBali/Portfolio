@@ -65,6 +65,20 @@
 
       <!-- Whale Animation Container -->
       <div id="whale" class="whale-animation"></div>
+
+      <!-- Water Animation -->
+      <div class="water-container">
+        <div id="water" class="water filter-active flow-active"></div>
+      </div>
+
+      <!-- Water Filter -->
+      <svg width="0" height="0">
+        <filter id="water-filter">
+          <feTurbulence id="feTurb" type="fractalNoise" baseFrequency="0.01 0.01" seed="7" numOctaves="2" />
+          <animate xlink:href="#feTurb" attributeName="baseFrequency" dur="40s" keyTimes="0;0.5;1" values="0.008 0.015;0.015 0.008;0.008 0.015" repeatCount="indefinite"/>
+          <feDisplacementMap id="feDisp" in="SourceGraphic" scale="150" />
+        </filter>
+      </svg>
     </section>
 
     <!-- About Section -->

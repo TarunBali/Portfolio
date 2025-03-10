@@ -6,9 +6,7 @@
   <meta name="description" content="Portfolio of Tarun Bali, a student passionate about AI/ML technology.">
   <title>Tarun Bali - Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- Interactive Whale CSS -->
   <link rel="stylesheet" href="interactive-whale.css">
 </head>
 <body>
@@ -40,7 +38,7 @@
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="hero" aria-label="Home section">
+    <section id="home" class="hero" aria-label="Home">
       <div class="hero-content">
         <h1>Tarun Bali</h1>
         <p class="tagline">AI Enthusiast | Creative Developer | Tech Explorer</p>
@@ -49,7 +47,7 @@
           <a href="mailto:T-_-B@outlook.com" target="_blank" aria-label="Email-1"><i class="fa fa-envelope-square"></i></a>
           <a href="mailto:T-A-R-U-N@outlook.com" aria-label="Email-2"><i class="fas fa-envelope"></i></a>
         </div>
-        <!-- Music Player (Replaces Explore My Universe Button) -->
+        <!-- Music Player -->
         <div id="music-player">
           <button id="prev-song" class="music-control" aria-label="Previous song">
             <i class="fas fa-backward"></i>
@@ -64,10 +62,10 @@
       </div>
 
       <!-- Whale Animation Container -->
-      <div id="whale" class="whale-animation"></div>
+      <div id="whale" class="whale-animation" aria-hidden="true"></div>
 
       <!-- Water Animation -->
-      <div class="water-container">
+      <div class="water-container" aria-hidden="true">
         <div id="water" class="water filter-active flow-active"></div>
       </div>
 
@@ -82,7 +80,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about" aria-label="About section">
+    <section id="about" class="about" aria-label="About">
       <h2>About Me</h2>
       <p>
         I’m <strong>Tarun Bali</strong>, an 18-year-old student currently pursuing a <strong>Bachelor of Arts in Political Science & English</strong> at the <strong>University of Delhi</strong>. My passion lies at the intersection of <strong>Artificial Intelligence (AI)</strong>, <strong>Machine Learning (ML)</strong>, and <strong>technology</strong>, where I constantly explore innovative ways to push boundaries and solve real-world problems.
@@ -113,7 +111,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects" aria-label="Projects section">
+    <section id="projects" class="projects" aria-label="Projects">
       <h2>My Projects</h2>
       <div class="project-tape">
         <button class="arrow left-arrow" aria-label="Previous project">&larr;</button>
@@ -125,7 +123,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact" aria-label="Contact section">
+    <section id="contact" class="contact" aria-label="Contact">
       <div class="contact-container">
         <div class="contact-info">
           <h2>Let's Connect!</h2>
@@ -148,16 +146,16 @@
           </div>
         </div>
         <form class="contact-form" aria-label="Contact form">
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <input type="text" placeholder="Your Name" aria-label="Your Name" required>
+          <input type="email" placeholder="Your Email" aria-label="Your Email" required>
+          <textarea placeholder="Your Message" rows="5" aria-label="Your Message" required></textarea>
           <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
         </form>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer aria-label="Footer">
+    <footer role="contentinfo">
       <p>&copy; 2025 Tarun Bali. All rights reserved.</p>
     </footer>
   </div>
@@ -165,47 +163,11 @@
   <!-- Background Music -->
   <audio id="background-music">
     <source src="Assets/song-1.mp3" type="audio/mpeg">
-    <source src="Assets/song-2.mp3" type="audio/mpeg">
-    <source src="Assets/song-3.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
   <!-- Scripts -->
-  <script src="jquery.js"></script>
-  <script src="interactive-whale.js"></script>
+  <script src="interactive-whale.js" defer></script>
   <script src="script.js" defer></script>
-
-  <!-- Ensure Whale Animation Only Works in Home Section -->
-  <script>
-    $(document).ready(function () {
-      // Function to check if the Home section is in view
-      function isHomeSectionInView() {
-        const homeSection = $('#home');
-        const scrollTop = $(window).scrollTop();
-        const windowHeight = $(window).height();
-        const sectionTop = homeSection.offset().top;
-        const sectionBottom = sectionTop + homeSection.outerHeight();
-
-        return scrollTop + windowHeight >= sectionTop && scrollTop <= sectionBottom;
-      }
-
-      // Toggle whale animation based on section visibility
-      function toggleWhaleAnimation() {
-        if (isHomeSectionInView()) {
-          $('#whale').show(); // Show the whale animation
-        } else {
-          $('#whale').hide(); // Hide the whale animation
-        }
-      }
-
-      // Initial check
-      toggleWhaleAnimation();
-
-      // Check on scroll
-      $(window).scroll(function () {
-        toggleWhaleAnimation();
-      });
-    });
-  </script>
 </body>
 </html>

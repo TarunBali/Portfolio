@@ -16,13 +16,13 @@ window.addEventListener('load', () => {
 });
 
 // Function to initialize the whale animation
-  function initializeWhaleAnimation() {
-    const whaleAnimationContainer = document.getElementById('whale-animation');
-    if (!whaleAnimationContainer) {
-      console.error('Whale animation container not found!');
-      return;
-    }
-    
+function initializeWhaleAnimation() {
+  const whaleAnimationContainer = document.getElementById('whale-animation');
+  if (!whaleAnimationContainer) {
+    console.error('Whale animation container not found!');
+    return;
+  }
+
   // Whale animation code
   const whale = (function () {
     const element = whaleAnimationContainer;
@@ -129,16 +129,16 @@ window.addEventListener('load', () => {
 
   // Initial check
   toggleWhaleAnimation();
-  }
+}
 
 // Function to initialize projects and other functionality
 function initializeProjects() {
   const projects = [
     { title: "LUCIFER", description: "Lucifer is a sleek, voice-activated personal assistant designed to simplify your daily tasks with intuitive commands and seamless integration into your workflow.", image: "Assets/project1.png" },
-    { title: "Wrath from the Shadows", description: "A shattered soul seeks retribution in the darkest corners, where the echoes of betrayal and revenge collide—but does he emerge victorious, or consumed by the very darkness he wields? ", image: "Assets/project2.jpg" },
+    { title: "Wrath from the Shadows", description: "A shattered soul seeks retribution in the darkest corners, where the echoes of betrayal and revenge collide—but does he emerge victorious, or consumed by the very darkness he wields?", image: "Assets/project2.jpg" },
     { title: "Celestia", description: "Digital Poster for a Sci-fi themed Cafe", image: "Assets/project3.jpg" },
     { title: "@DUZHDC", description: "A reel I made for the instagram page @DUZHDC", image: "Assets/project4.jpg" },
-    { title: "Gesture Cursor Control", description: "A Python program that lets you control your cursor from fair using a webcam", image: "Assets/project5.jpg" },
+    { title: "Gesture Cursor Control", description: "A Python program that lets you control your cursor from far using a webcam", image: "Assets/project5.jpg" },
     { title: "Status of Acid Rain in India", description: "A Literature review delving into the Causes, Effects and Status of Acid Rain in India", image: "Assets/project6.jpg" },
   ];
 
